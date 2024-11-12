@@ -1,0 +1,86 @@
+
+# JavaScript-Beispiel: Elemente im DOM verändern
+
+In diesem Beispiel zeigen wir, wie man verschiedene Elemente auf einer Webseite mit JavaScript manipuliert und verändert.
+
+---
+
+## Code-Anleitung
+
+### 1. Ändern der Hintergrundfarbe des Body-Elements
+```javascript
+document.body.style.backgroundColor = "#f0e68c";
+```
+- Diese Zeile setzt die Hintergrundfarbe des `body`-Elements auf ein helles Gelb (`#f0e68c`).
+- Durch die Verwendung von `document.body.style.backgroundColor` wird der CSS-Stil des `body`-Elements direkt angepasst.
+
+---
+
+### 2. Ändern des h1-Textes auf den eigenen Namen
+```javascript
+document.querySelector("h1").textContent = "Gabriele";
+```
+- `document.querySelector("h1")` sucht das erste `<h1>`-Element auf der Seite.
+- `.textContent = "Gabriele";` ändert den Textinhalt des `<h1>`-Elements zu „Gabriele“ (ersetzen Sie „Gabriele“ durch den eigenen Namen).
+
+---
+
+### 3. Hinzufügen der Klasse "large" zum p-Element
+```javascript
+document.querySelector("p").classList.add("large");
+```
+- `document.querySelector("p")` sucht das erste `<p>`-Element auf der Seite.
+- `.classList.add("large")` fügt dem `<p>`-Element die CSS-Klasse `large` hinzu, wodurch es eine Schriftgröße von 2em erhält (sofern im CSS definiert).
+
+---
+
+### 4. Ein neues li-Element hinzufügen
+```javascript
+const ul = document.querySelector("ul");
+const newLi = document.createElement("li");
+newLi.textContent = "Dritter Eintrag";
+ul.appendChild(newLi);
+```
+- `const ul = document.querySelector("ul");` findet das `<ul>`-Element und speichert es in der `ul`-Variable.
+- `const newLi = document.createElement("li");` erstellt ein neues `<li>`-Element.
+- `newLi.textContent = "Dritter Eintrag";` setzt den Text des neuen `<li>`-Elements auf „Dritter Eintrag“.
+- `ul.appendChild(newLi);` fügt das neue `<li>`-Element am Ende der Liste hinzu.
+
+---
+
+### 5. Entfernen des zweiten li-Elements
+```javascript
+ul.removeChild(ul.children[1]);
+```
+- `ul.children[1]` greift auf das zweite Kind-Element (`<li>`) innerhalb des `<ul>`-Elements zu (da die Zählung bei 0 beginnt).
+- `ul.removeChild(...)` entfernt das zweite `<li>`-Element aus der Liste.
+
+---
+
+### 6. Ein Bild nach dem h1-Element einfügen
+```javascript
+const img = document.createElement("img");
+img.src = "https://via.placeholder.com/150"; // Beispielbild
+img.alt = "Platzhalter Bild";
+document.body.insertBefore(img, document.querySelector("p"));
+```
+- `const img = document.createElement("img");` erstellt ein neues `<img>`-Element.
+- `img.src = "https://via.placeholder.com/150";` setzt die Bildquelle (`src`) auf ein Platzhalterbild (z.B. ein 150x150 Pixel großes Bild).
+- `img.alt = "Platzhalter Bild";` fügt einen alternativen Text hinzu, der angezeigt wird, wenn das Bild nicht geladen werden kann.
+- `document.body.insertBefore(img, document.querySelector("p"));` fügt das Bild in den `body`-Inhalt ein, und zwar direkt vor das `<p>`-Element.
+
+// Zusatzaufgabe 1: 10 li-Elemente aus einem Array generieren und zur Liste hinzufügen
+
+let listItems = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8', 'Item 9', 'Item 10'];
+listItems.forEach(item => {
+let li = document.createElement('li');
+li.textContent = item;
+ul.appendChild(li);
+});
+
+// Zusatzaufgabe 2: Hintergrundfarbe zufällig auswählen
+
+let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+document.body.style.backgroundColor = randomColor;
+
+---

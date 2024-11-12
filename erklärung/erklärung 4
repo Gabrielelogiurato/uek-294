@@ -1,0 +1,30 @@
+//Wähle alle Spiele im Bereich "Neuveröffentlichungen" aus:
+Array.from(document.getElementsByTagName('ul')[0].children);
+Array.from(document.querySelector('ul').children);
+
+//Unterschied verstehen.
+document.querySelector('#game-of-the-day')
+document.getElementById('game-of-the-day');
+//
+
+//Wähle das zweite Spiel im Bereich "Bestseller" aus:
+document.querySelector('ul:nth-of-type(2) li:nth-of-type(2)');
+document.getElementsByClassName('games')[1].children[1];
+Array.from(document.getElementsByTagName('h2')).find(x=> x.textContent === "Top Sellers").nextElementSibling.children[1];
+
+
+//Wähle das letzte Spiel im Bereich "Kostenlos spielen" aus:
+document.getElementsByClassName('games')[2].lastElementChild;
+document.querySelector('.games:last-child li:last-child');
+
+//Wähle alle Listenelemente im Bereich "Bestseller" aus:s
+document.querySelectorAll("h2:nth-of-type(2) + .games li")
+
+//Wähle das h1-Element aus:
+document.querySelector("h1")
+
+//Wähle das game-of-the-day-Element aus:
+document.getElementById("game-of-the-day")
+
+//Wähle alle Spiele aus, die im Sale sind:
+document.querySelectorAll(".sale")

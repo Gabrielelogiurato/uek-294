@@ -1,0 +1,79 @@
+Wie kann sichergestellt werden, dass bei der Ausführung von JavaScript der DOM schon geladen ist?
+
+
+Einbinden des externen JavaScripts am Ende des Inhalts vom Body-Element mit <script src="script.js"></script>
+Einbinden des externen JavaScript mit <script src="script.js"></script>, wobei document.addEventListener("DOMContentLoaded", () => {}); verwendet wird.
+Einbinden des externen JavaScripts mit <script src="script.js" defer></script>
+
+Wie kann aus jeder ungeordneten Liste der erste Eintrag selektiert werden?
+
+document.querySelectorAll("ul li:first-child")
+document.querySelectorAll("ul li:nth-child(1)")
+
+Wie kann das rote Gemüse selektiert werden?
+
+document.getElementsByClassName('rot')
+document.querySelectorAll('.rot')
+
+Wie können alle Gemüse selektiert werden, wofür keine Farbe definiert ist, sprich, das Attribut 'class' fehlt?
+
+document.querySelectorAll('li:not([class])')
+document.querySelectorAll('li:not(.gruen):not(.rot)')
+
+Wie können alle li-Elemente mit Sommergemüse selektiert werden?
+document.querySelectorAll('#sommer + ul li')
+document.getElementById('sommer').nextElementSibling.getElementsByTagName('li')
+
+
+Wie können alle Kindelemente von der letzten ungeordneten Liste ausgegeben werden?
+document.querySelector('ul:last-of-type').children
+document.getElementsByTagName('ul')[3].children
+const ul = document.getElementsByTagName('ul');
+ul[ul.length - 1].children
+
+Wie können alle roten Gemüse entfernt werden?
+
+document.querySelectorAll(".rot").forEach(n => n.remove())
+
+Wie kann dem Kürbis die Farbe orange als CSS Klasse hinzugefügt werden?
+const gemuese = document.querySelectorAll('li');
+for(let g of gemuese) {
+  if(g.innerText === "Kürbis") {
+    g.classList.add('orange');
+  }
+}
+
+
+const gemuese = document.getElementsByTagName('li');
+for(let g of gemuese) {
+  if(g.innerText === "Kürbis") {
+    g.classList.add('orange');
+  }
+}
+
+Wie kann der Liste mit Frühlingsgemüse der Spargel hinzugefügt werden?
+const fruehlingsListe = document.querySelector('#fruehling + ul');
+const spargel = document.createElement('li');
+spargel.innerText = 'Spargel';
+fruehlingsListe.appendChild(spargel);
+
+
+
+Verstecken und entfernen von DOM-Elementen unterscheiden sich. Wird ein DOM-Element entfernt, so ist die Information nicht mehr vorhanden. Wird ein DOM-Element versteckt, so ist es für den Benutzer nur unsichtbar, jedoch ist die Information noch im DOM vorhanden. Ordnen Sie die passende Beschreibung dem Code zu.
+
+const sommerTitel = document.getElementById('sommer');
+sommerTitel.remove(); // entfernen
+
+const sommerTitel = document.getElementById('sommer');
+sommerTitel.style.visibility = 'hidden'; //verstecken nicht rutscht
+
+const sommerTitel = document.getElementById('sommer');
+sommerTitel.style.display = 'none';//verstecken aber andere rutschen
+
+
+
+Ein modaler Dialog ist eine Benutzeroberflächenkomponente,die in Webanwendungen häufig verwendet wird, um die Aufmerksamkeit des Benutzers auf eine bestimmte Aktion zu lenken und eine Entscheidung zu erzwingen, bevor andere Interaktionen möglich sind. (meist als Pop-up)
+
+
+
+

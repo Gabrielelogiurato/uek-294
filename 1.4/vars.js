@@ -1,6 +1,6 @@
-let name = "Test"
-let age = 23
+let name = "Test";
+let age = 23;
 
-var test = "asdasd"
+var test = "asdasd";
 
-const test2 = 2;
+const test2 = 2; 

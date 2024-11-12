@@ -1,0 +1,26 @@
+
+      html {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #stage {
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(2px);
+        background-color: #eeeeeeaa;
+        border-bottom: 1px solid #ddd;
+      }
+
+      #stage, #log {
+        padding: 1rem;
+      }
+
+      #log {
+        padding-top: 0;
+      }

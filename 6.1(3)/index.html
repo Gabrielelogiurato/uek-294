@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahlenoperation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Zahlenoperationen</h1>
+    <p>Geben Sie Zahlen ein, wählen Sie eine Operation und sehen Sie das Ergebnis.</p>
+
+    <form id="numberForm">
+        <label for="numberInput">Zahl eingeben:</label>
+        <input type="number" id="numberInput" placeholder="Geben Sie eine Zahl ein">
+        <button type="button" id="addNumber">Zahl hinzufügen</button>
+    </form>
+
+    <div id="numberList"></div>
+
+    <form id="operationForm">
+        <label for="operation">Operation auswählen:</label>
+        <select id="operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <button type="button" id="calculate">Berechnen</button>
+    </form>
+
+    <div id="result"></div> 
+
+    <script src="script.js" defer></script>
+</body>
+</html>

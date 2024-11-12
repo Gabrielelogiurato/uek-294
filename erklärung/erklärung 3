@@ -1,0 +1,42 @@
+
+# Glossar der Web-Komponenten
+
+## 1. Accordion
+
+### Name und Synonyme
+- **Name**: Accordion
+- **Synonyme**: Collapsible Panel, Expandable Panel, Toggle Panel
+
+### Einsatzzweck und Funktion
+Ein Accordion ist eine UI-Komponente, die es ermöglicht, Inhalte in einer hierarchischen Struktur darzustellen. Diese Struktur kann durch Klicken oder Tippen auf die jeweiligen Header (Kopfzeilen) auf- oder zugeklappt werden. Dies spart Platz auf der Seite und sorgt für eine übersichtliche Darstellung, insbesondere bei großen Mengen an Informationen, die in separate Abschnitte unterteilt sind. Die Akkordeon-Komponente wird häufig in Formularen, Navigationsbereichen und auf Dashboard-Seiten verwendet.
+
+### Screenshot (Desktop und Smartphone)
+- **Desktop**:
+  ![Accordion Desktop](https://mui.com/static/images/accordion/accordion-desktop.png)
+- **Smartphone**:
+  ![Accordion Smartphone](https://mui.com/static/images/accordion/accordion-mobile.png)
+
+### Quellen
+- [Material UI Accordion](https://mui.com/material-ui/components/accordion/)
+- [Ant Design Accordion](https://ant.design/components/collapse/)
+
+---
+
+## 2. Multiselect
+
+### Name und Synonyme
+- **Name**: Multiselect
+- **Synonyme**: Multiple Select, Multi-Option Selector, Multi-Choice Dropdown
+
+### Einsatzzweck und Funktion
+Das Multiselect ist eine UI-Komponente, die Benutzern ermöglicht, mehrere Optionen aus einer Liste auszuwählen. Diese Funktion wird oft in Formularen oder Filtern verwendet, in denen der Benutzer aus einer Vielzahl von Optionen mehrere auswählen muss. Typischerweise zeigt das Multiselect eine Dropdown-Liste oder Checkboxen an, die der Benutzer aktivieren oder deaktivieren kann. Ein Vorteil dieser Komponente ist die Möglichkeit, eine große Anzahl von Optionen effizient zu verwalten, ohne dass die Benutzeroberfläche überladen wird.
+
+### Screenshot (Desktop und Smartphone)
+- **Desktop**:
+  ![Multiselect Desktop](https://mui.com/static/images/multiselect/multiselect-desktop.png)
+- **Smartphone**:
+  ![Multiselect Smartphone](https://mui.com/static/images/multiselect/multiselect-mobile.png)
+
+### Quellen
+- [Material UI Multiselect](https://mui.com/material-ui/components/select/)
+- [Ant Design Multiselect](https://ant.design/components/select/)

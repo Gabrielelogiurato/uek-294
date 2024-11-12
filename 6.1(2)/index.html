@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahlenschätzspiel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Zahlenschätzspiel</h1>
+    <p>Versuchen Sie, die Zahl zwischen 1 und 100 zu erraten.</p>
+
+    <form id="guessForm">
+        <label for="guessInput">Geben Sie eine Zahl ein:</label>
+        <input type="number" id="guessInput" name="guess" min="1" max="100" required>
+        <button type="submit">Raten</button>
+    </form>
+
+    <div id="message"></div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
