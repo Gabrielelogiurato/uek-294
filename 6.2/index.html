@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passwortformular</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Passwortformular</h1>
-    <form id="passwordForm" action="#" method="post">
-        <label for="password">Passwort:</label>
-        <input type="password" id="password" name="password" required minlength="8">
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="script.js" defer></script>
+    </head>
+    <body>
+        <form name="register">
+            <label for="email">E-Mailadresse</label>
+            <input type="email" name="email" required />
 
-        <label for="confirmPassword">Passwort bestätigen:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required minlength="8">
+            <label for="password">Passwort</label>
+            <input type="password" name="password" required minlength="6" />
 
-        <button type="submit">Absenden</button>
-        <p id="error-message"></p>
-    </form>
+            <label for="passwordconfirm">Passwortbestätigung</label>
+            <input type="password" name="passwordconfirm" required minlength="6" />
 
-    <script src="script.js"></script>
-</body>
+            <label for="agb">AGB akzeptieren</label>
+            <input type="checkbox" required name="agb"/>
+
+            <button type="submit">Registrieren</button>
+        </form>
+    </body>
 </html>
