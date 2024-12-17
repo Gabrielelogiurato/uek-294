@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auftrag 9.1: Projektarbeit</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="auth.js" defer></script>
+    <script src="task.js" defer></script>
+  </head>
+  <body>
+    <h1>ToDo List</h1>
+
+    <!-- Login-Bereich -->
+    <div id="login">
+      <input type="email" id="email" placeholder="E-Mail" />
+      <input type="password" id="password" placeholder="Passwort" />
+      <button id="login-btn">Login</button>
+    </div>
+
+    <!-- Aufgabenbereich -->
+    <div id="task-container" style="display: none">
+      <h2>Tasks</h2>
+      <ul id="task-list"></ul>
+
+      <!-- Formular für neue Aufgabe -->
+      <form id="task-form">
+        <input
+          type="text"
+          id="task-title"
+          placeholder="Neue Aufgabe"
+          required
+        />
+        <button type="submit">Add Tasks</button>
+      </form>
+    </div>
+    <!-- Logout-Button im Aufgabenbereich, initial unsichtbar -->
+    <button
+      id="logout-btn"
+      style="
+        background-color: #d9534f;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      "
+    >
+      Logout
+    </button>
+  </body>
+</html>
